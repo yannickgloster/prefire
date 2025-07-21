@@ -2,6 +2,9 @@
 
 This is a [Plasmo extension](https://docs.plasmo.com/) that adds FACEIT levels to Challengermode.
 
+<img width="5088" height="3128" alt="image" src="https://github.com/user-attachments/assets/d9163cb0-1f0f-4daf-a254-55a91151f3d3" />
+
+
 ## Installation
 
 1. Clone the repository
