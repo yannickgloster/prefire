@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cm-text-secondary {
+  color: rgb(149, 172, 218);
+}
