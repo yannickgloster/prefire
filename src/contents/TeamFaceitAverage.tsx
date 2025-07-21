@@ -31,10 +31,11 @@ const TeamFaceitAverage: FC<PlasmoCSUIProps> = ({ anchor }) => {
     anchor.element.parentElement?.parentElement?.parentElement
 
   const [averageElo, setAverageElo] = useState<string>()
-  const [retries, setRetries] = useState(0)
 
   useEffect(() => {
     if (!teamContainer) return
+
+    let retries = 0
 
     const pollForPlayers = () => {
       const players = teamContainer.querySelectorAll("[data-faceit-elo]")
@@ -55,7 +56,7 @@ const TeamFaceitAverage: FC<PlasmoCSUIProps> = ({ anchor }) => {
         return true
       }
 
-      setRetries(retries + 1)
+      retries++
 
       return false
     }
