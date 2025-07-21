@@ -1,8 +1,8 @@
 {
   "name": "prefire",
   "displayName": "Prefire",
-  "version": "0.0.1",
-  "description": "Improve the Challengermode counter strike experience",
+  "version": "0.1.0",
+  "description": "Upgrade Challengermode with FACEIT data",
   "author": "Yannick <yannick@gloster.dev>",
   "scripts": {
     "dev": "plasmo dev",
