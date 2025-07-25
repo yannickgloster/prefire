@@ -1,7 +1,7 @@
 # Prefire
 
 ![Chromium](https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)
-![Firefox](https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white&link=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fprefire%2)
+[![Firefox](https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/prefire/)
 ![GitHub License](https://img.shields.io/github/license/yannickgloster/prefire?style=for-the-badge&link=https%3A%2F%2Fgithub.com%2Fyannickgloster%2Fprefire%2Fblob%2Fmain%2FLICENSE&color=6677FF)
 
 
