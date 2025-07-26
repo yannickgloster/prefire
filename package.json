@@ -1,7 +1,7 @@
 {
   "name": "prefire",
   "displayName": "Prefire",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Upgrade Challengermode with FACEIT data",
   "author": "Yannick <yannick@gloster.dev>",
   "scripts": {
@@ -28,7 +28,9 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://www.challengermode.com/*"
+      "https://www.challengermode.com/*",
+      "https://open.faceit.com/*",
+      "https://steamcommunity.com/*"
     ]
   }
 }
