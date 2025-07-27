@@ -1,6 +1,6 @@
 # Prefire
 
-![Chromium](https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)
+[![Chromium](https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/prefire/ocamphmmohobniabgakalobckpjdmkbc)
 [![Firefox](https://img.shields.io/amo/stars/prefire?style=for-the-badge&label=Firefox&color=FF7139&logo=Firefox-Browser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/prefire/)
 [![GitHub License](https://img.shields.io/github/license/yannickgloster/prefire?style=for-the-badge&color=6677FF)](https://github.com/yannickgloster/prefire/blob/main/LICENSE)
 
