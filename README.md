@@ -12,6 +12,7 @@ This is a [Plasmo extension](https://docs.plasmo.com/) that adds FACEIT levels t
 ## Features
 
 - FACEIT ranks for each user with a connected Steam account
+- FACEIT average kills and adr in last 30 matches
 - Average team ranks on a match page
 
 # Development
