@@ -59,7 +59,7 @@ const FaceitRanks: FC<PlasmoCSUIProps> = ({ anchor }) => {
   useEffect(() => {
     const fetchFaceitData = async () => {
       try {
-        const response = await fetch(
+        const playerAccountDataResponse = await fetch(
           `https://open.faceit.com/data/v4/players?game=cs2&game_player_id=${steamId}`,
           {
             method: "GET",
@@ -69,23 +69,23 @@ const FaceitRanks: FC<PlasmoCSUIProps> = ({ anchor }) => {
           }
         )
 
-        if (!response.ok) {
+        if (!playerAccountDataResponse.ok) {
           throw new Error("Failed to fetch FACEIT data")
         }
 
-        const data = await response.json()
+        const playerAccountData = await playerAccountDataResponse.json()
 
         const playerData: FaceitData = {
-          level: data.games?.cs2?.skill_level,
-          nickname: data.nickname,
-          elo: data.games?.cs2?.faceit_elo,
-          country: data.country,
-          game_player_id: data.player_id
+          level: playerAccountData.games?.cs2?.skill_level,
+          nickname: playerAccountData.nickname,
+          elo: playerAccountData.games?.cs2?.faceit_elo,
+          country: playerAccountData.country,
+          game_player_id: playerAccountData.player_id
         }
 
         // Fetch player statistics
-        const response_stats = await fetch(
-          `https://open.faceit.com/data/v4/players/${data.player_id}/games/cs2/stats?limit=30`,
+        const playerMatchDataResponse = await fetch(
+          `https://open.faceit.com/data/v4/players/${playerAccountData.player_id}/games/cs2/stats?limit=30`,
           {
             method: "GET",
             headers: {
@@ -94,11 +94,11 @@ const FaceitRanks: FC<PlasmoCSUIProps> = ({ anchor }) => {
           }
         )
 
-        if (response_stats.ok) {
-          const statsData = await response_stats.json()
+        if (playerMatchDataResponse.ok) {
+          const playerMatchesData = await playerMatchDataResponse.json()
 
-          if (statsData.items && statsData.items.length > 0) {
-            const { total_kills, total_adr } = statsData.items.reduce(
+          if (playerMatchesData.items && playerMatchesData.items.length > 0) {
+            const { total_kills, total_adr } = playerMatchesData.items.reduce(
               (accumulator, match) => {
                 accumulator.total_kills += Number(match.stats.Kills) || 0
                 accumulator.total_adr += Number(match.stats.ADR) || 0
@@ -107,7 +107,7 @@ const FaceitRanks: FC<PlasmoCSUIProps> = ({ anchor }) => {
               { total_kills: 0, total_adr: 0 }
             )
 
-            const matchCount = statsData.items.length
+            const matchCount = playerMatchesData.items.length
             playerData.avgKills = total_kills / matchCount
             playerData.avgADR = total_adr / matchCount
           }
