@@ -98,13 +98,14 @@ const FaceitRanks: FC<PlasmoCSUIProps> = ({ anchor }) => {
           const statsData = await response_stats.json()
 
           if (statsData.items && statsData.items.length > 0) {
-            let total_kills = 0
-            let total_adr = 0
-
-            for (let match of statsData.items) {
-              total_kills += Number(match.stats.Kills) || 0
-              total_adr += Number(match.stats.ADR) || 0
-            }
+            const { total_kills, total_adr } = statsData.items.reduce(
+              (accumulator, match) => {
+                accumulator.total_kills += Number(match.stats.Kills) || 0
+                accumulator.total_adr += Number(match.stats.ADR) || 0
+                return accumulator
+              },
+              { total_kills: 0, total_adr: 0 }
+            )
 
             const matchCount = statsData.items.length
             playerData.avgKills = total_kills / matchCount
