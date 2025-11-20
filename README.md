@@ -7,12 +7,12 @@
 
 This is a [Plasmo extension](https://docs.plasmo.com/) that adds FACEIT levels to Challengermode.
 
-<img width="5088" height="3128" alt="image" src="https://github.com/user-attachments/assets/d9163cb0-1f0f-4daf-a254-55a91151f3d3" />
+<img width="1920" height="945" alt="www challengermode com_s_ZTGAMERS_games_a4c8ec4d-0d21-46ca-62fc-08de1bdee2e1" src="https://github.com/user-attachments/assets/4ef3fafc-8f9d-4040-b89a-3565c0571ac0" />
 
 ## Features
 
 - FACEIT ranks for each user with a connected Steam account
-- FACEIT average kills and adr in last 30 matches
+- FACEIT average kills and ADR in the last 30 matches
 - Average team ranks on a match page
 
 # Development
